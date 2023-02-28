@@ -6,7 +6,7 @@
 /*   By: tkong <tkong@student.42seoul.kr>           +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/02/18 06:57:19 by tkong             #+#    #+#             */
-/*   Updated: 2023/02/18 07:15:36 by tkong            ###   ########.fr       */
+/*   Updated: 2023/02/28 09:30:32 by tkong            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -34,7 +34,7 @@ int main() {
 		}
 	}
 	{
-		std::string arr[MAX_ARR] = { "hello", };
+		std::string arr[MAX_ARR] = {};
 		for (int i = 0; i < MAX_ARR; ++i) {
 			std::cout << "arr[" << i << "]: " << arr[i] << '\n';
 		}
