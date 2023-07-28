@@ -6,7 +6,7 @@
 /*   By: tkong <tkong@student.42seoul.kr>           +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/02/18 07:24:21 by tkong             #+#    #+#             */
-/*   Updated: 2023/02/18 09:38:02 by tkong            ###   ########.fr       */
+/*   Updated: 2023/07/28 15:05:49 by tkong            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -15,24 +15,22 @@
 
 #define MAX_VAL 750
 
-void leaks() {
-	system("leaks program");
-}
+void leaks() { system("leaks program"); }
 
 int main() {
-	// Array<int> arr(10);
-	// for (int i = 0; i < (int) arr.size(); ++i) {
+	// Array<int> arr(5);
+	// for (size_t i = 0; i < arr.size(); ++i) {
 	// 	std::cout << arr[i] << " -> ";
 	// 	arr[i] += i;
 	// 	std::cout << arr[i] << '\n';
 	// }
 	// try {
 	// 	std::cout << arr[10] << '\n';
-	// } catch (const std::exception& e) {
+	// } catch (const std::exception &e) {
 	// 	std::cout << e.what() << '\n';
 	// }
-	// Array<std::string> arr2(10);
-	// for (int i = 0; i < (int) arr2.size(); ++i) {
+	// Array<std::string> arr2(5);
+	// for (size_t i = 0; i < arr2.size(); ++i) {
 	// 	arr2[i] += "Hey!";
 	// 	std::cout << arr2[i] << " -> ";
 	// 	arr2[i] += " Hello World!";
@@ -40,9 +38,10 @@ int main() {
 	// }
 	// try {
 	// 	std::cout << arr2[10] << '\n';
-	// } catch (const std::exception& e) {
+	// } catch (const std::exception &e) {
 	// 	std::cout << e.what() << '\n';
 	// }
+
     Array<int> numbers(MAX_VAL);
     int* mirror = new int[MAX_VAL];
     srand(time(NULL));
@@ -88,5 +87,5 @@ int main() {
         numbers[i] = rand();
     }
     delete[] mirror;
-	atexit(leaks);
+	// atexit(leaks);
 }

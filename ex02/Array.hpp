@@ -6,7 +6,7 @@
 /*   By: tkong <tkong@student.42seoul.kr>           +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/02/18 07:24:22 by tkong             #+#    #+#             */
-/*   Updated: 2023/07/28 11:52:52 by tkong            ###   ########.fr       */
+/*   Updated: 2023/07/28 12:57:37 by tkong            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -19,16 +19,16 @@
 
 template <class T>
 class Array {
-	T* ptr;
+	T *ptr;
 	size_t n;
 
 public:
 	Array();
-	Array(const Array& rhs);
+	Array(const Array &rhs);
 	Array(size_t n);
 	virtual ~Array();
-	virtual Array& operator=(const Array& rhs);
-	virtual T& operator[](size_t idx);
+	virtual Array &operator=(const Array &rhs);
+	virtual T &operator[](size_t idx);
 
 	virtual size_t size() const;
 
