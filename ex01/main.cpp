@@ -6,7 +6,7 @@
 /*   By: tkong <tkong@student.42seoul.kr>           +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/02/18 06:57:19 by tkong             #+#    #+#             */
-/*   Updated: 2023/07/30 15:43:16 by tkong            ###   ########.fr       */
+/*   Updated: 2023/07/30 19:55:37 by tkong            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -16,13 +16,8 @@
 #define MAX_ARR 5
 
 void add(int &a) { a += 10; }
-void attach(std::string &a) { a += "Hello World!"; }
-template <class T> void print(const T &a) {
-	static const size_t MAX = MAX_ARR;
-	static size_t i;
-	std::cout << "arr[" << i++ << "]: " << a << ", ";
-	if (i >= MAX) { i = 0; }
-}
+void attach(std::string &a) { a += "Hello"; }
+template <class T> void print(const T &a) { std::cout << a << ", "; }
 
 int main() {
 	{
