@@ -11,15 +11,13 @@
 /* ************************************************************************** */
 
 template <class T>
-Array<T>::Array() : ptr(), n() {}
+Array<T>::Array() : ptr(new T[0]()), n() {}
 
 template <class T>
 Array<T>::Array(const Array &rhs) : ptr(), n() { *this = rhs; }
 
 template <class T>
-Array<T>::Array(size_t n) : ptr(new T[n]), n(n) {
-	for (size_t i=0; i<n; ++i) { ptr[i] = T(); }
-}
+Array<T>::Array(size_t n) : ptr(new T[n]()), n(n) {}
 
 template <class T>
 Array<T>::~Array() {
