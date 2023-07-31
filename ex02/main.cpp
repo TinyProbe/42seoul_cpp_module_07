@@ -6,7 +6,7 @@
 /*   By: tkong <tkong@student.42seoul.kr>           +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/02/18 07:24:21 by tkong             #+#    #+#             */
-/*   Updated: 2023/07/28 15:05:49 by tkong            ###   ########.fr       */
+/*   Updated: 2023/07/31 09:05:28 by tkong            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -18,29 +18,43 @@
 void leaks() { system("leaks program"); }
 
 int main() {
-	// Array<int> arr(5);
-	// for (size_t i = 0; i < arr.size(); ++i) {
-	// 	std::cout << arr[i] << " -> ";
-	// 	arr[i] += i;
-	// 	std::cout << arr[i] << '\n';
-	// }
-	// try {
-	// 	std::cout << arr[10] << '\n';
-	// } catch (const std::exception &e) {
-	// 	std::cout << e.what() << '\n';
-	// }
-	// Array<std::string> arr2(5);
-	// for (size_t i = 0; i < arr2.size(); ++i) {
-	// 	arr2[i] += "Hey!";
-	// 	std::cout << arr2[i] << " -> ";
-	// 	arr2[i] += " Hello World!";
-	// 	std::cout << arr2[i] << '\n';
-	// }
-	// try {
-	// 	std::cout << arr2[10] << '\n';
-	// } catch (const std::exception &e) {
-	// 	std::cout << e.what() << '\n';
-	// }
+	{
+		Array<int> arr(5);
+		for (size_t i = 0; i < arr.size(); ++i) {
+			std::cout << arr[i] << " -> ";
+			arr[i] += i;
+			std::cout << arr[i] << '\n';
+		}
+		try {
+			std::cout << arr[10] << '\n';
+		} catch (const std::exception &e) {
+			std::cout << e.what() << '\n';
+		}
+	}
+	{
+		Array<std::string> arr(5);
+		for (size_t i = 0; i < arr.size(); ++i) {
+			arr[i] += "Hey!";
+			std::cout << arr[i] << " -> ";
+			arr[i] += " Hello World!";
+			std::cout << arr[i] << '\n';
+		}
+		try {
+			std::cout << arr[10] << '\n';
+		} catch (const std::exception &e) {
+			std::cout << e.what() << '\n';
+		}
+	}
+	{
+		Array<int> arr(2);
+		Array<int> arr2(2);
+		arr[0]=10, arr[1]=22, arr2[0]=50, arr2[1]=123;
+		for (size_t i=0; i<arr.size(); ++i)  { std::cout<<arr[i] <<' '; } std::cout<<'\n';
+		for (size_t i=0; i<arr2.size(); ++i) { std::cout<<arr2[i]<<' '; } std::cout<<'\n';
+		arr = arr2;
+		for (size_t i=0; i<arr.size(); ++i)  { std::cout<<arr[i] <<' '; } std::cout<<'\n';
+		for (size_t i=0; i<arr2.size(); ++i) { std::cout<<arr2[i]<<' '; } std::cout<<'\n';
+	}
 
     Array<int> numbers(MAX_VAL);
     int* mirror = new int[MAX_VAL];
@@ -87,5 +101,5 @@ int main() {
         numbers[i] = rand();
     }
     delete[] mirror;
-	// atexit(leaks);
+	atexit(leaks);
 }
