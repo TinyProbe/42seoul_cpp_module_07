@@ -41,4 +41,10 @@ T &Array<T>::operator[](size_t idx) {
 }
 
 template <class T>
+const T &Array<T>::operator[](size_t idx) const {
+	if (idx >= n) { throw std::exception(); }
+	return ptr[idx];
+}
+
+template <class T>
 size_t Array<T>::size() const { return n; }

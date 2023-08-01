@@ -6,7 +6,7 @@
 /*   By: tkong <tkong@student.42seoul.kr>           +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/02/18 07:24:22 by tkong             #+#    #+#             */
-/*   Updated: 2023/08/01 10:53:59 by tkong            ###   ########.fr       */
+/*   Updated: 2023/08/01 14:27:52 by tkong            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -28,6 +28,7 @@ public:
 	virtual ~Array();
 	virtual Array &operator=(const Array &rhs);
 	virtual T &operator[](size_t idx);
+	virtual const T &operator[](size_t idx) const;
 
 	virtual size_t size() const;
 

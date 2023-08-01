@@ -6,7 +6,7 @@
 /*   By: tkong <tkong@student.42seoul.kr>           +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/02/18 07:24:21 by tkong             #+#    #+#             */
-/*   Updated: 2023/08/01 10:59:08 by tkong            ###   ########.fr       */
+/*   Updated: 2023/08/01 14:30:23 by tkong            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -30,6 +30,8 @@ int main() {
 		} catch (const std::exception &e) {
 			std::cout << e.what() << '\n';
 		}
+		const Array<int> arr2 = arr;
+		std::cout << arr2[2] << '\n';
 	}
 	{
 		Array<std::string> arr(5);
