@@ -6,7 +6,7 @@
 /*   By: tkong <tkong@student.42seoul.kr>           +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/02/18 07:24:22 by tkong             #+#    #+#             */
-/*   Updated: 2023/07/28 12:57:37 by tkong            ###   ########.fr       */
+/*   Updated: 2023/08/01 10:53:59 by tkong            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,8 +14,7 @@
 #ifndef ARRAY_HPP
 #define ARRAY_HPP
 
-#include <cstring>
-#include <stdexcept>
+#include <exception>
 
 template <class T>
 class Array {

@@ -6,7 +6,7 @@
 /*   By: tkong <tkong@student.42seoul.kr>           +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/02/18 07:24:21 by tkong             #+#    #+#             */
-/*   Updated: 2023/07/31 09:05:28 by tkong            ###   ########.fr       */
+/*   Updated: 2023/08/01 10:59:08 by tkong            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -49,10 +49,10 @@ int main() {
 		Array<int> arr(2);
 		Array<int> arr2(2);
 		arr[0]=10, arr[1]=22, arr2[0]=50, arr2[1]=123;
-		for (size_t i=0; i<arr.size(); ++i)  { std::cout<<arr[i] <<' '; } std::cout<<'\n';
+		for (size_t i=0; i<arr.size();  ++i) { std::cout<<arr[i] <<' '; } std::cout<<'\n';
 		for (size_t i=0; i<arr2.size(); ++i) { std::cout<<arr2[i]<<' '; } std::cout<<'\n';
 		arr = arr2;
-		for (size_t i=0; i<arr.size(); ++i)  { std::cout<<arr[i] <<' '; } std::cout<<'\n';
+		for (size_t i=0; i<arr.size();  ++i) { std::cout<<arr[i] <<' '; } std::cout<<'\n';
 		for (size_t i=0; i<arr2.size(); ++i) { std::cout<<arr2[i]<<' '; } std::cout<<'\n';
 	}
 
